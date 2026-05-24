@@ -9,29 +9,43 @@ description: >
 # Testing Strategy
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Design test plans across unit, integration, and e2e layers. Output: test pyramid recommendation, coverage priorities, and tool choices. Users: engineers planning a test suite or filling coverage gaps.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- System type: API, UI, data pipeline, library
+- Current test coverage and pain points
+- Deployment frequency and risk tolerance
+- Language, framework, existing test tooling
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Test pyramid recommendation - ratio of unit/integration/e2e
+2. Coverage priorities - what to test first and why
+3. Unit test plan - which modules, what behaviour to assert
+4. Integration test plan - which seams, what contracts to verify
+5. E2E test plan - which critical user journeys to automate
+6. Tool recommendations with rationale
+7. What not to test - explicitly scope out
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Tests verify behaviour through public interfaces, not internals
+- Coverage priorities tied to risk: what breaks most, costs most
+- No "test everything" - explain trade-offs in what is skipped
+- Tool choices match team's existing stack where possible
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Identify the riskiest code paths: payment flows, auth, data writes
+2. Map existing coverage: what layers are already tested
+3. Design unit tests for pure logic and edge cases
+4. Design integration tests for service boundaries and DB interactions
+5. Design e2e tests for 2-3 critical user journeys only
+6. Recommend test tooling per layer
+7. List what to skip and why (trivial getters, third-party code)
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - test pyramid, mocking guidelines, coverage targets

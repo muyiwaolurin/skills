@@ -9,29 +9,47 @@ description: >
 # Meeting Facilitator
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Produce agendas, action items, and meeting summaries. Output: structured docs that make meetings shorter and follow-through reliable. Users: anyone running or summarising a meeting.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Meeting type: planning, retro, decision, kickoff, or status
+- Attendees and their roles
+- Desired outcome: what must be decided or completed by end
+- Time available
+- Pre-read materials or context
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+For agenda:
+1. Meeting goal - one sentence outcome
+2. Timed agenda items with owner per item
+3. Pre-read links or required prep
+
+For summary:
+1. Decisions made - numbered list
+2. Action items - owner, task, due date
+3. Parking lot - items deferred with owner to resolve
+4. Next meeting date and focus
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Every agenda item has a clear purpose and time box
+- Action items have a single owner, not "the team"
+- Summary decisions are unambiguous - no "we discussed X"
+- Parking lot prevents scope creep mid-meeting
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Confirm meeting goal and time available
+2. List agenda items, assign time boxes and owners
+3. Put most critical decision first - guard against time running out
+4. During or after meeting: capture decisions verbatim
+5. Extract action items: task + owner + due date
+6. Record deferred items in parking lot with resolution path
+7. Send summary within 24 hours
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - agenda templates, retro formats, meeting types

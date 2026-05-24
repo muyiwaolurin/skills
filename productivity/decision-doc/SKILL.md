@@ -9,29 +9,44 @@ description: >
 # Decision Doc
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Write structured decision documents using DACI or RACI. Output: a doc that aligns stakeholders and records the decision with its reasoning. Users: leads and PMs driving cross-functional decisions.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Decision to be made - stated as a question
+- Driver (DACI: D), Approver, Contributors, Informed
+- Options under consideration
+- Deadline for the decision
+- Context: why this decision is needed now
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Decision question - one clear sentence
+2. Context and background - why this decision matters now
+3. DACI table - Driver, Approver, Contributors, Informed
+4. Options considered - each with pros, cons, and key trade-off
+5. Recommendation - preferred option with rationale
+6. Decision outcome - filled in after approval
+7. Follow-up actions with owners and dates
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Decision question is answerable - not open-ended "what should we do about X"
+- Options section shows real trade-offs, not a strawman vs winner
+- Recommendation states confidence level and key assumptions
+- DACI has exactly one Driver and one Approver
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Write the decision question as a single closed question
+2. Write 2-3 sentences of context: what changed, what is at risk
+3. Populate DACI roles with names, not team names
+4. Write 2-4 options with honest pros and cons
+5. State recommendation with top 2-3 reasons
+6. Set decision deadline and next review date
+7. List follow-up actions post-decision
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - DACI vs RACI, decision doc templates

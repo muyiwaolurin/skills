@@ -9,29 +9,41 @@ description: >
 # User Story Writer
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Generate user stories with acceptance criteria ready for sprint planning. Output: stories a developer can pick up without clarification. Users: PMs and leads writing backlog items.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Feature or capability to write stories for
+- Target user persona
+- Definition of done for the team
+- Edge cases or constraints already known
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+Per story:
+1. Story title
+2. Story format: "As a [user], I want [action] so that [outcome]"
+3. Acceptance criteria - Given/When/Then or checklist format
+4. Out of scope notes
+5. Dependencies or blockers
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Each story is independently deliverable - no implicit dependencies
+- Acceptance criteria are testable: a QA engineer can write a test from them
+- No story covers more than one user goal
+- Edge cases captured in acceptance criteria, not left to imagination
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Identify distinct user goals in the feature request
+2. Write one story per goal - split if two goals are bundled
+3. Write acceptance criteria: cover happy path, error states, and edge cases
+4. Add explicit out-of-scope to prevent gold-plating
+5. Flag dependencies on other stories, services, or teams
+6. Estimate complexity if asked: S/M/L or story points
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - story splitting patterns, AC writing guide

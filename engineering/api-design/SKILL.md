@@ -9,29 +9,42 @@ description: >
 # API Design
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Design clear, consistent REST or GraphQL APIs. Output: spec, examples, error contracts. Users: backend engineers, tech leads, API consumers.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Resource domain and business operations needed
+- Auth method (API key, OAuth, JWT)
+- Consumers: internal service, mobile, or public third-party
+- Versioning constraints and breaking vs non-breaking requirements
+- Data volume and pagination needs
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Resource overview - entities and relationships
+2. Endpoint list - method, path, purpose, auth requirement
+3. Request/response examples - JSON with realistic data
+4. Error contract - status codes and error body shape
+5. Versioning and deprecation notes
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Every endpoint has a complete request and response example
+- Error codes are specific, not generic 500s
+- No ambiguous field names - use domain language consistently
+- Breaking changes flagged explicitly
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Confirm resources, operations, and consumer type
+2. Draft resource model - list entities and key fields
+3. Map CRUD and business operations to HTTP verbs and paths
+4. Design request/response shapes with all required and optional fields
+5. Define error contract per endpoint
+6. Add pagination, filtering, sorting where relevant
+7. Flag breaking vs additive changes if modifying an existing API
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - REST conventions, GraphQL patterns, OpenAPI structure

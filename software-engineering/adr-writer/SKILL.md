@@ -9,29 +9,41 @@ description: >
 # ADR Writer
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Write Architecture Decision Records that document why a decision was made, not just what was decided. Output: a durable record future engineers can read to understand the codebase. Users: engineers and architects logging significant technical choices.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Decision to record - the choice that was made
+- Context: what problem or constraint forced this decision
+- Alternatives that were considered
+- Consequences: what this decision makes easier or harder
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Title - ADR-NNN: [short present-tense statement of decision]
+2. Status - proposed, accepted, deprecated, or superseded
+3. Context - forces at play that required a decision
+4. Decision - what was decided and who decided it
+5. Consequences - positive and negative outcomes of this choice
+6. Alternatives considered - each with why it was rejected
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Title states the decision, not the problem ("Use PostgreSQL" not "Database Selection")
+- Context explains constraints without justifying the choice yet
+- Consequences are honest: list downsides, not just benefits
+- Alternatives section shows the decision was reasoned, not arbitrary
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Confirm the decision being recorded and its status
+2. Write context: what changed, what constraint exists, what was unclear
+3. Write the decision statement in present tense
+4. List consequences: what gets easier, what gets harder, what is now locked in
+5. Write 2-3 alternatives with honest rejection reasons
+6. Assign ADR number and link to superseded ADR if replacing one
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - ADR numbering, status lifecycle, templates

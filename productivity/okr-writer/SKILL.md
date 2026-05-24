@@ -9,29 +9,41 @@ description: >
 # OKR Writer
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Write OKRs with measurable, time-bound key results. Output: 1-3 objectives each with 2-4 key results that signal real progress. Users: PMs, team leads, and individuals setting quarterly goals.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Team or individual context: what does this person or team own
+- Time horizon: quarter or half
+- Strategic priorities from leadership or company OKRs
+- Current performance baseline for key metrics
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+Per objective:
+1. Objective - aspirational, qualitative, time-bound statement
+2. Key results - measurable outcomes, not outputs (2-4 per objective)
+3. Confidence rating - how likely current on 1-10 scale
+4. Owner per key result
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Objective is inspiring and directional, not a task list
+- Key results are outcomes ("NPS increases from 32 to 45") not activities ("ship feature X")
+- Achieving 70% of a key result still counts as progress - ambition is expected
+- No more than 3 objectives per team per quarter
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Identify 1-3 most important outcomes for the period
+2. Write each objective as an ambitious but achievable statement
+3. For each objective, write 2-4 key results with baseline and target
+4. Check: would hitting these KRs prove the objective was met
+5. Set initial confidence score (7/10 is healthy ambition)
+6. Assign owners to each key result
+7. Align with parent OKRs if cascading from company or division level
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - OKR writing patterns, output vs outcome distinction

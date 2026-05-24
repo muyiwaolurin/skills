@@ -9,29 +9,44 @@ description: >
 # System Design
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Design scalable systems and produce architecture docs with trade-off analyses. Output: diagrams, component breakdown, decision rationale. Users: engineers, tech leads, architects.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Problem to solve: scale, domain, constraints
+- Non-functional requirements: latency, availability, consistency targets
+- Traffic estimates: requests/sec, data volume, growth rate
+- Existing systems to integrate with or migrate from
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Problem restatement - clarify scope and constraints
+2. High-level architecture - components and interactions
+3. Data model - key entities, storage choices, schema sketch
+4. API contract - main endpoints or message schemas
+5. Trade-off analysis - options considered and why this was chosen
+6. Failure modes and mitigations
+7. Open questions and future considerations
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Every component choice has a stated reason
+- Trade-offs are explicit: not "X is better" but "X trades Y for Z"
+- Scale numbers are used to justify choices, not decorate them
+- Failure modes addressed: what breaks and what the fallback is
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Confirm scope: what is in and out of the design
+2. Gather scale numbers - estimate if not given
+3. Identify the hardest constraint: throughput, consistency, latency
+4. Sketch high-level components and data flow
+5. Choose storage: type, schema, access patterns
+6. Design APIs or message contracts
+7. Enumerate failure modes: network partitions, node failures, bad inputs
+8. Write trade-off section: what alternatives were rejected and why
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - CAP theorem, common patterns, capacity estimation

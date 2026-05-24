@@ -9,29 +9,42 @@ description: >
 # Debugging
 
 ## Purpose
-<!-- What problem does this skill solve? Who uses it? -->
+
+Systematic root-cause analysis for bugs, errors, and regressions. Reproduce first, hypothesise second, fix last. Skip no phases.
 
 ## Inputs to gather
-<!-- List the information Claude should collect before starting -->
-- 
-- 
+
+- Error message or symptom - exact text, not paraphrase
+- Steps to reproduce or last known good state
+- Recent changes: code, config, deps, infrastructure
+- Environment: local, staging, or prod
 
 ## Output structure
-<!-- Define the sections / format of the final output -->
-1. 
-2. 
+
+1. Reproduction steps confirmed
+2. Hypothesis list - ranked by likelihood
+3. Instrumentation plan - what to add/check per hypothesis
+4. Root cause identified - evidence trail
+5. Fix with explanation
+6. Regression test added
 
 ## Quality bar
-<!-- What does "great" look like? Link to assets/example.md if present -->
-- Every output must be actionable and specific
-- See `assets/example.md` for a real-world sample
+
+- Root cause is a specific line or condition, not "something is wrong with X"
+- Fix addresses cause, not symptom
+- Regression test prevents reoccurrence
+- If root cause not found, explicitly state what was ruled out
 
 ## Step-by-step instructions
-<!-- The core workflow Claude follows -->
-1. 
-2. 
-3. 
+
+1. Reproduce the bug - get a fast, deterministic fail signal
+2. Narrow scope: isolate to smallest reproducing case
+3. List 3-5 hypotheses ordered by likelihood
+4. Test top hypothesis: add logging or run targeted check
+5. Eliminate and repeat until root cause confirmed
+6. Write fix - minimal change that addresses root cause
+7. Add regression test covering the exact failure mode
 
 ## References
-<!-- Point to files in references/ that Claude should read on demand -->
-- `references/guide.md` — background reading and frameworks
+
+- `references/guide.md` - debugging loops, bisection, instrumentation patterns
